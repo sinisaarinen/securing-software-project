@@ -13,6 +13,30 @@
   </head>
 <h1>Welcome to the Chatroom</h1>
 
-<a href="/login/">Login</a></li>
+<h2>Add new post</h2>
 
+<form action='post/' method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <textarea name="content" cols="40" rows="5"></textarea>
+  <input type="submit" value="Send"/>
+</form>
+
+<form action='filter/' method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <input name="filter"></input>
+  <input type="submit" value="Send"/>
+</form>
+
+<h2>Activity</h2>
+
+<ol>
+  {% for msg in posts %}
+  <!-- This is insecure and allows XSS attacks --> 
+  <li>{{msg.content|safe}}</li>
+  {% endfor %}
+</ol>
+
+<a href="/logout">Logout</a>
 </html>

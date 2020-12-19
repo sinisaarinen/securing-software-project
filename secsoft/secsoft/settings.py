@@ -32,12 +32,14 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'chatroom',
+    'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
 
 MIDDLEWARE = [
@@ -87,9 +89,6 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
@@ -99,6 +98,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_COOKIE_AGE = 1000 * 60
 
 
 # Internationalization
