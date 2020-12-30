@@ -40,8 +40,7 @@ class LoginPage(View):
             )
 
             if user is None:
-                return HttpResponseRedirect(reverse_lazy('adopcion:solicitud_listar'))
-
+                return redirect('/accounts/login/')
 
             try:
                 form.confirm_login_allowed(user)
