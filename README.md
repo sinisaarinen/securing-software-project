@@ -1,4 +1,4 @@
-# PROJECT REPORT
+# A SIMPLE APP TO POST MESSAGES ON A WEB PAGE
 
 Purpose of the project: to create a web application containing at least five out of the 10 security flaws from the OWASP TOP 10 list.
 
