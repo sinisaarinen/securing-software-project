@@ -1,8 +1,6 @@
 # PROJECT REPORT
 
-Purpose of the project: to create a web application containing at least five out of the 10 security flaws from the OWASP top 10 list.
-
-Link to the project on Github: https://github.com/sinisaarinen/securing-software-project
+Purpose of the project: to create a web application containing at least five out of the 10 security flaws from the OWASP TOP 10 list.
 
 ## Installation instructions:
 
